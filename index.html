@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/js/dependencies/vue.js"></script>
     <script src="scripts/js/dependencies/axios-master/dist/axios.min.js"></script>
 </head>
+
 <body>
     <div class="hero is-fullheight is-info">
         <div class="hero-body">
             <div class="container">
-                <p class="title has-text-centered">Class Card Inquiry-LCC</p>
-                <input class="input barcode" type="text" placeholder="input BarCode">
+                <p class="title">Class Card Inquiry-LCC</p>
+                <br>
+                <input class="input" type="text" placeholder="input BarCode" v-model="BC" name="BC">
+                <button class="button is-primary" @click='search()'>Submit</button>
+                
+                <div id="track"><br>
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <tr>
+                            <th>ID</th>
+                            <th>BarCode</th>
+                            <th>Name</th>
+                            <th>Year/Course</th>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                            <th>Class Card</th>
+                        </tr>
+                        <tr v-for="student in students">
+                            <td>{{ student.ID }}</td>
+                            <td>{{ student.BarCode }}</td>
+                            <td>{{ student.Names }}</td>
+                            <td>{{ student.YearandCourse }}</td>
+                            <td>{{ student.Subject }}</td>
+                            <td>{{ student.Grade }}</td>
+                            <td>{{ student.ClassCard }}</td>
+                        </tr>
+                    </table><br><br>
+                </div>
             </div>
         </div>
     </div>
-</body>
+    <script>
+        let app = new Vue({
+            el: '#track',
+            data: {
+                students: "",
+                BC: ""
+            },
+            methods: {
+                search: function() {
+                    axios.get('scripts/php/track.php', {
+                            params: {
+                                BC: this.BC
+                            }
+                        })
+                        .then(function(response) {
+                            app.students = response.data;
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
+                }
+            }
+        })
+    </script>
     <script src="scripts/js/dependencies/jquery-3.3.1.min.js"></script>
-    <script src="scripts/js/dependencies/vue.js"></script>
     <script src="scripts/js/function.js"></script>
+</body>
+
 </html>
