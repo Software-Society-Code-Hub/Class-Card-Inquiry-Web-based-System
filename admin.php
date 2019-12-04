@@ -28,12 +28,11 @@
                     <input type="file" name="StudentList" required><br>
                     <br>
                     <button class="button is-primary" value="submit" type="submit" name="submit">Submit Database</button>
-                </form>
-                
+                </form><br>
+                <button class="button is-danger">Log Out</button>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
