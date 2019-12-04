@@ -2,3 +2,6 @@ body, html {
     font-family: sans-serif;
     line-height: inherit;
 }
+.input {
+    width: 50% !important;
+}
