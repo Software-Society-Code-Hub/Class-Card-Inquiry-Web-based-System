@@ -49,12 +49,13 @@ include 'config.php';
         <div class="hero-body">
             <div class="container">
                 <form method="post">
-                    <h1 class="title">Login page</h1>
+                    <h1 class="title">Admin login</h1>
                     <label class="label"><p class="subtitle">Username:</p> </label>
                     <input type="text" class="input" placeholder="input username" name="username">
                     <label class="label"><p class="subtitle">Password: </p></label>
                     <input type="password" class="input" placeholder="input password" name="password"><br><br>
                     <button type="submit" value="submit" class="button is-primary" name="submit">Log In</button>
+                    <button class="button is-warning"><a href="../../index.html">Home</a></button>
                 </form>
             </div>
         </div>
