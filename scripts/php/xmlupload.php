@@ -50,7 +50,7 @@ foreach ($xml->children() as $row) {
     
     $result = mysqli_query($con, $sql);
     
-    if (! empty($result)) {
+    if (!empty($result)) {
         $affectedRow ++;
     } else {
         $error_message = mysqli_error($con) . "\n";

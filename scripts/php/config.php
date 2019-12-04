@@ -1,6 +1,8 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
-header('location:../admin.php');
+$user = 'root';
+$pass = '';
+
+$db = 'class-card-inquiry-lcc';
+
+$con = mysqli_connect('localhost', $user, $pass, $db) or die("Unable to connect");
 ?>
