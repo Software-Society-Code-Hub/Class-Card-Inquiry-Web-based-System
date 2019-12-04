@@ -1,3 +1,8 @@
+<?php session_start();
+ if(!isset($_SESSION['Admin'])){
+        header("Location:scripts/php/admin-login.php");
+    }
+?>
 <?php
     include 'scripts/php/xmlupload.php';
 ?>
@@ -6,7 +11,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Card Inquiry-LCC Bais City</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/style.css">
