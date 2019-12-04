@@ -2,7 +2,7 @@
 include 'config.php';
 
 
-$getBarCode = $_GET['BC'];
+$getBarCode = $_GET['BarCode'];
 
 
 $userData = mysqli_query($con,"SELECT * from classcardinquiry WHERE BarCode='$getBarCode'");
