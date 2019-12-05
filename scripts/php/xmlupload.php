@@ -28,39 +28,38 @@ if(isset($_POST['submit'])){
         } else {
             echo "cannot upload file";
         }
-}
-?>
-<?php
-include 'config.php';
-
-$affectedRow = 0;
-
-$xml = simplexml_load_file("scripts/php/db/StudentList.xml") or die("Error: Cannot create object");
-
-foreach ($xml->children() as $row) {
-    $ID = $row->ID;
-    $BarCode = $row->BarCode;
-    $Names = $row->Names;
-    $YearandCourse = $row->YearandCourse;
-    $Subject = $row->Subject;
-    $Grade = $row->Grade;
-    $ClassCard = $row->ClassCard;
     
-    $sql = "INSERT INTO classcardinquiry(ID,BarCode,Names,YearandCourse,Subject,Grade,ClassCard) VALUES ('" . $ID. "','" . $BarCode . "','" . $Names . "','" . $YearandCourse . "', '" . $Subject . "', '" . $Grade . "', '" . $ClassCard . "')";
+    include 'config.php';
+
+    $affectedRow = 0;
+
+    $xml = simplexml_load_file("scripts/php/db/StudentList.xml") or die("Error: Cannot create object");
+
+    foreach ($xml->children() as $row) {
+        $ID = $row->ID;
+        $BarCode = $row->BarCode;
+        $Names = $row->Names;
+        $YearandCourse = $row->YearandCourse;
+        $Subject = $row->Subject;
+        $Grade = $row->Grade;
+        $ClassCard = $row->ClassCard;
+        $SpecialKey = $row->SpecialKey;
     
-    $result = mysqli_query($con, $sql);
+        $sql = "INSERT INTO classcardinquiry(ID,BarCode,Names,YearandCourse,Subject,Grade,ClassCard,SpecialKey) VALUES ('" .$ID. "','" .$BarCode. "','" .$Names. "','" .$YearandCourse. "', '" .$Subject. "', '" .$Grade. "', '" .$ClassCard. "' ,'" .$SpecialKey."')";
     
-    if (!empty($result)) {
-        $affectedRow ++;
-    } else {
-        $error_message = mysqli_error($con) . "\n";
+        $result = mysqli_query($con, $sql);
+    
+        if (!empty($result)) {
+            $affectedRow ++;
+        } else {
+            $error_message = mysqli_error($con) . "\n";
+        }
     }
-}
-if(isset($_POST['submit'])){
-    if ($affectedRow > 0) {
-        echo ' <p style="position:absolute; color:white; font-size:36px"> '.$affectedRow.' records were inserted</p>';
-    } else {
-        echo '<p style="position:absolute; color:white; font-size:36px">no records were inserted</p>';
-    }
+
+        if ($affectedRow > 0) {
+            echo ' <p style="position:absolute; color:white; font-size:36px">   '.$affectedRow.' records were inserted</p>';
+        } else {
+            echo '<p style="position:absolute; color:white; font-size:36px">no records were inserted</p>';
+        }
 }
 ?>
