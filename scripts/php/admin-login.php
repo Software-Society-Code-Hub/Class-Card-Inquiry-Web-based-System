@@ -13,7 +13,7 @@ include 'config.php';
             $_SESSION['Admin'] = 'true';
             header('location:../../../Class-Card-Inquiry-LCC-Website-migration/admin.php');
         } else {
-            echo "wrong code";
+            echo '<p style="color: red; position: absolute; font-size: 36px">wrong username or password</p>';
         }
 }
 ?>
