@@ -1,6 +1,7 @@
 body, html {
     font-family: sans-serif;
     line-height: inherit;
+    background-color: #209cee;
 }
 .input {
     width: 30% !important;
