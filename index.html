@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/js/dependencies/vue.js"></script>
+    <script src="scripts/js/dependencies/vue.min.js"></script>
     <script src="scripts/js/dependencies/axios-master/dist/axios.min.js"></script>
 </head>
 
@@ -18,16 +18,16 @@
                 <p class="title">Class Card Inquiry-LCC Bais City</p>
                 <br>
                 <label class="label" style="color: white">Bar Code:</label>
-                <input class="input" type="text" placeholder="input BarCode" v-model="BarCode" name="BarCode"><br><br>
+                <input class="input" type="text" placeholder="input Bar Code" v-model="BarCode" name="BarCode"><br><br>
                 <label class="label" style="color: white">Special Key:</label>
-                <input class="input" type="password" placeholder="input special key" v-model="specialKey" name="specialKey">
+                <input class="input" type="password" placeholder="input Special Key" v-model="specialKey" name="specialKey">
                 <button class="button is-primary" @click='searchBC()'>Submit</button>
                 
                 <div><br>
                     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                         <tr>
                             <th>ID</th>
-                            <th>BarCode</th>
+                            <th>Bar Code</th>
                             <th>Name</th>
                             <th>Year/Course</th>
                             <th>Subject</th>

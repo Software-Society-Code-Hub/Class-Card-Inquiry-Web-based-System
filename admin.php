@@ -24,10 +24,10 @@
                 
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
 
-                    <label class="label"><p class="title">Update Database</p></label>
+                    <label class="label"><p class="title">Upload XML file</p></label>
                     <input type="file" name="StudentList" required><br>
                     <br>
-                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit Database</button>
+                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit XML file</button>
                     <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button>
                 </form><br>
             </div>

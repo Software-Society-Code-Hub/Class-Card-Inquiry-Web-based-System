@@ -57,9 +57,9 @@ if(isset($_POST['submit'])){
     }
 
         if ($affectedRow > 0) {
-            echo ' <p style="position:absolute; color:white; font-size:36px">   '.$affectedRow.' records were inserted</p>';
+            echo ' <p style="position:absolute; color:white; font-size:36px">   '.$affectedRow.' record(s) were inserted in the database.</p>';
         } else {
-            echo '<p style="position:absolute; color:white; font-size:36px">no records were inserted</p>';
+            echo '<p style="position:absolute; color:white; font-size:36px">no records were inserted in the database.</p>';
         }
 }
 ?>
