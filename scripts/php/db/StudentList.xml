@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2019-12-07T19:36:56">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2019-12-07T22:20:49">
 <StudentList>
 <ID>1</ID>
 <BarCode>123</BarCode>
@@ -7,7 +7,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss1</Subject>
 <Grade>30</Grade>
-<ClassCard>0</ClassCard>
+<ClassCard>Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -17,7 +17,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss2</Subject>
 <Grade>30</Grade>
-<ClassCard>0</ClassCard>
+<ClassCard>Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -27,7 +27,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss3</Subject>
 <Grade>30</Grade>
-<ClassCard>0</ClassCard>
+<ClassCard>Not Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -37,7 +37,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss4</Subject>
 <Grade>30</Grade>
-<ClassCard>1</ClassCard>
+<ClassCard>Released</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -47,7 +47,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss5</Subject>
 <Grade>30</Grade>
-<ClassCard>2</ClassCard>
+<ClassCard>Released</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -57,7 +57,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss6</Subject>
 <Grade>30</Grade>
-<ClassCard>3</ClassCard>
+<ClassCard>Released</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -67,7 +67,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss7</Subject>
 <Grade>30</Grade>
-<ClassCard>4</ClassCard>
+<ClassCard>Not Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -77,7 +77,7 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss8</Subject>
 <Grade>30</Grade>
-<ClassCard>5</ClassCard>
+<ClassCard>Not Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
@@ -87,12 +87,17 @@
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss9</Subject>
 <Grade>30</Grade>
-<ClassCard>6</ClassCard>
+<ClassCard>Not Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
 <ID>11</ID>
-<ClassCard>7</ClassCard>
+<BarCode>123</BarCode>
+<Names>Antonino Apilyido</Names>
+<YearandCourse>BSIT - I</YearandCourse>
+<Subject>ss10</Subject>
+<Grade>30</Grade>
+<ClassCard>Not Available</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 </dataroot>
