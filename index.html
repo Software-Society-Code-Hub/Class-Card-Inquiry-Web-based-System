@@ -18,11 +18,12 @@
                 <p class="title">Class Card Inquiry-LCC Bais City</p>
                 <br>
                 <label class="label" style="color: white">Bar Code:</label>
-                <input class="input" type="text" placeholder="input Bar Code" v-model="BarCode" name="BarCode"><br><br>
+                <input class="input" type="text" placeholder="input Bar Code" v-model="BarCode" name="BarCode"><br>
                 <label class="label" style="color: white">Special Key:</label>
                 <input class="input" type="password" placeholder="input Special Key" v-model="specialKey" name="specialKey">
+                <p class="help">Please match the Bar Code and Special Key that is given to you.</p><br>
                 <button class="button is-primary" @click='searchBC()'>Submit</button>
-                
+
                 <div><br>
                     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                         <tr>
@@ -45,7 +46,7 @@
                         </tr>
                     </table><br><br>
                 </div>
-                <button class="button is-warning"><a href="admin.php">Update database</a></button>
+                <button class="button is-warning"><a href="admin.php">Configure database</a></button>
                 <br><br>
                 <h1 class="subtitle has-text-centered is-warning" style="color: mistyrose!important">This website is in beta, if you have encountered problems/difficulties using our site, please contact the (person in charge).</h1>
             </div>
