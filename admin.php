@@ -36,7 +36,7 @@
                 <br>
                 <div id="view">
                     <label class="label"><p class="title">View database</p></label>
-                    <label class="label"><p class="subtitle">Search ID:</p> </label>
+                    <label class="label"><p class="subtitle">Search by ID:</p> </label>
                     <input type="input" class="input" v-model="ID" name="ID">
                     <button type="submit" class="button is-primary" @click='searchID()'>Submit</button>
                     <button type="submit" class="button is-primary" @click='viewAll()'>View all records</button>
@@ -74,7 +74,7 @@
             el: '#view',
             data: {
                 students: "",
-                ID: ""
+                ID: "0"
             },
             methods: {
                 searchID: function() {
