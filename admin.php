@@ -50,6 +50,7 @@
                             <th>Subject</th>
                             <th>Grade</th>
                             <th>Class Card</th>
+                            <th>Special Key</th>
                         </tr>
                         <tr v-for="student in students">
                             <td>{{ student.ID }}</td>
@@ -59,6 +60,7 @@
                             <td>{{ student.Subject }}</td>
                             <td>{{ student.Grade }}</td>
                             <td>{{ student.ClassCard }}</td>
+                            <td>{{ student.SpecialKey }}</td>
                         </tr>
                     </table>
                     
@@ -74,7 +76,7 @@
             el: '#view',
             data: {
                 students: "",
-                ID: "0"
+                ID: ""
             },
             methods: {
                 searchID: function() {
