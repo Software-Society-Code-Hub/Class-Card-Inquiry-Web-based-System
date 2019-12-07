@@ -4,7 +4,7 @@
     }
 ?>
 <?php
-    include 'scripts/php/xmlupload.php';
+    include 'scripts/php/configdb.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,24 +15,93 @@
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="css/dependencies/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/js/dependencies/vue.min.js"></script>
+    <script src="scripts/js/dependencies/axios-master/dist/axios.min.js"></script>
 </head>
 
 <body>
     <div class="hero is-fullheight is-info">
         <div class="hero-body">
             <div class="container">
-                
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
 
                     <label class="label"><p class="title">Upload XML file</p></label>
-                    <input type="file" name="StudentList" required><br>
+                    <input type="file" name="StudentList"><br>
                     <br>
-                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit XML file</button>
-                    <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button>
-                </form><br>
+                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit XML file</button><br><br>
+                    <label class="label"><p class="title">Delete current database</p></label>
+                    <button class="button is-warning" value="submit" type="submit" name="deletedb">Delete database</button>
+                    <p class="help">WARNING!: this will delete the current existing database.</p>
+                </form>
+                <br>
+                <div id="view">
+                    <label class="label"><p class="title">View database</p></label>
+                    <label class="label"><p class="subtitle">Search ID:</p> </label>
+                    <input type="input" class="input" v-model="ID" name="ID">
+                    <button type="submit" class="button is-primary" @click='searchID()'>Submit</button>
+                    <button type="submit" class="button is-primary" @click='viewAll()'>View all records</button>
+                    <br><br>
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <tr>
+                            <th>ID</th>
+                            <th>Bar Code</th>
+                            <th>Name</th>
+                            <th>Year/Course</th>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                            <th>Class Card</th>
+                        </tr>
+                        <tr v-for="student in students">
+                            <td>{{ student.ID }}</td>
+                            <td>{{ student.BarCode }}</td>
+                            <td>{{ student.Names }}</td>
+                            <td>{{ student.YearandCourse }}</td>
+                            <td>{{ student.Subject }}</td>
+                            <td>{{ student.Grade }}</td>
+                            <td>{{ student.ClassCard }}</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                <br><br>
+                <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button>
             </div>
         </div>
     </div>
+    
+    <script>
+        let app = new Vue({
+            el: '#view',
+            data: {
+                students: "",
+                ID: ""
+            },
+            methods: {
+                searchID: function() {
+                    axios.get('scripts/php/admindb.php', {
+                            params: {
+                                ID: this.ID
+                            }
+                        })
+                        .then(function(response) {
+                            app.students = response.data;
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
+                },
+                viewAll: function() {
+                    axios.get('scripts/php/admindb.php')
+                    .then(function(response) {
+                        app.students = response.data;
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
