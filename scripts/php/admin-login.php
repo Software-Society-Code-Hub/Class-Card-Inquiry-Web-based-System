@@ -13,7 +13,7 @@ include 'config.php';
             $_SESSION['Admin'] = 'true';
             header('location:../../../Class-Card-Inquiry-LCC-Website-migration/admin.php');
         } else {
-            echo '<p style="color: red; position: absolute; font-size: 36px">invalid username or password</p>';
+            echo '<p style="color: white; position: absolute; font-size: 36px">invalid username or password</p>';
         }
 }
 ?>
@@ -54,9 +54,9 @@ include 'config.php';
                     <input type="text" class="input" placeholder="input username" name="username">
                     <label class="label"><p class="subtitle">Password: </p></label>
                     <input type="password" class="input" placeholder="input password" name="password"><br><br>
-                    <button type="submit" value="submit" class="button is-primary" name="submit">Log In</button>
-                    <button class="button is-warning"><a href="../../index.html">Home</a></button>
-                </form>
+                    <button type="submit" value="submit" class="button is-primary" name="submit">Login</button>
+                </form><br>
+                <button class="button is-warning"><a href="../../index.html">Home</a></button>
             </div>
         </div>
     </div>
