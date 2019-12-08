@@ -26,22 +26,7 @@ include 'config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/dependencies/bulma-0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="../../css/dependencies/bulma-0.7.1/css/bulma.css.map">
-    <style>
-        .input {
-            width: 50%;
-        }
-
-        @media screen and (max-width: 1000px) {
-            .input {
-                width: 50% !important;
-            }
-
-            h1 {
-                width: 100% !important;
-                padding: 5 !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
