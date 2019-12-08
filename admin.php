@@ -25,19 +25,28 @@
             <div class="container">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
 
-                    <label class="label"><p class="title">Upload XML file</p></label>
+                    <label class="label">
+                        <p class="title">Update/Upload database</p>
+                    </label>
                     <input type="file" name="StudentList"><br>
-                    <br>
-                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit XML file</button><br><br>
-                    <label class="label"><p class="title">Delete current database</p></label>
+                    <button class="button is-primary" value="submit" type="submit" name="submit">Submit XML file</button>
+                    <p class="help">XML file only.</p>
+                    <hr>
+                    <label class="label">
+                        <p class="title">Delete current database</p>
+                    </label>
                     <button class="button is-warning" value="submit" type="submit" name="deletedb">Delete database</button>
                     <p class="help">WARNING!: this will delete the current existing database.</p>
                 </form>
-                <br>
+                <hr>
                 <div id="view">
-                    <label class="label"><p class="title">View database</p></label>
-                    <label class="label"><p class="subtitle">Search by ID:</p> </label>
-                    <input type="input" class="input" v-model="ID" name="ID">
+                    <label class="label">
+                        <p class="title">View database</p>
+                    </label>
+                    <label class="label">
+                        <p class="subtitle">Search Bar Code:</p>
+                    </label>
+                    <input type="input" class="input" v-model="BC" name="BC" placeholder="input Bar Code">
                     <button type="submit" class="button is-primary" @click='searchID()'>Submit</button>
                     <button type="submit" class="button is-primary" @click='viewAll()'>View all records</button>
                     <br><br>
@@ -63,43 +72,44 @@
                             <td>{{ student.SpecialKey }}</td>
                         </tr>
                     </table>
-                    
                 </div>
                 <br><br>
                 <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button>
             </div>
         </div>
     </div>
-    
+
     <script>
         let app = new Vue({
             el: '#view',
             data: {
                 students: "",
-                ID: ""
+                BC: ""
             },
             methods: {
                 searchID: function() {
-                    axios.get('scripts/php/admindb.php', {
-                            params: {
-                                ID: this.ID
-                            }
-                        })
+                    if (this.BC > 0) {
+                        axios.get('scripts/php/admindb.php', {
+                                params: {
+                                    BC: this.BC
+                                }
+                            })
+                            .then(function(response) {
+                                app.students = response.data;
+                            })
+                            .catch(function(error) {
+                                console.log(error);
+                            });
+                    }
+                },
+                viewAll: function() {
+                    axios.get('scripts/php/admindb.php')
                         .then(function(response) {
                             app.students = response.data;
                         })
                         .catch(function(error) {
                             console.log(error);
                         });
-                },
-                viewAll: function() {
-                    axios.get('scripts/php/admindb.php')
-                    .then(function(response) {
-                        app.students = response.data;
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
                 }
             }
         })
