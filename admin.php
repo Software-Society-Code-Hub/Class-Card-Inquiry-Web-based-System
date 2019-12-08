@@ -74,7 +74,8 @@
                     </table>
                 </div>
                 <br><br>
-                <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button>
+                <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button><br><br>
+                <h1 class="subtitle has-text-centered">NOTE!: Some updated/changed records may not show when updating the database, this is because MySQL doesn't detect updated rows in XML files. You may delete the database and reupload the updated XML file to insert the updated/changed records.</h1>
             </div>
         </div>
     </div>
