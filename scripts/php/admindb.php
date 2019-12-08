@@ -2,8 +2,8 @@
 include 'config.php';
 
 $condition = "1";
-if(isset($_GET['ID'])){
-   $condition = " ID=".$_GET['ID'];
+if(isset($_GET['BC'])){
+   $condition = " BarCode=".$_GET['BC'];
 }
 $userData = mysqli_query($con,"SELECT * from classcardinquiry WHERE ".$condition);
 
