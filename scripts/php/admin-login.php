@@ -11,7 +11,7 @@ include 'config.php';
         if(mysqli_num_rows($result)==1){
             session_start();
             $_SESSION['Admin'] = 'true';
-            header('location:../../../Class-Card-Inquiry-LCC-Website-migration/admin.php');
+            header('location:../../admin.php');
         } else {
             echo '<p style="color: white; position: absolute; font-size: 36px">invalid username or password</p>';
         }
