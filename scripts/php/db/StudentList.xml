@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2019-12-07T22:20:49">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2020-06-18T16:01:11">
 <StudentList>
 <ID>1</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss1</Subject>
 <Grade>30</Grade>
-<ClassCard>Available</ClassCard>
+<ClassCard>Released</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
 <ID>3</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss2</Subject>
 <Grade>30</Grade>
-<ClassCard>Available</ClassCard>
+<ClassCard>Released</ClassCard>
 <SpecialKey>AntoninoA</SpecialKey>
 </StudentList>
 <StudentList>
 <ID>4</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss3</Subject>
 <Grade>30</Grade>
@@ -33,7 +33,7 @@
 <StudentList>
 <ID>5</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss4</Subject>
 <Grade>30</Grade>
@@ -43,7 +43,7 @@
 <StudentList>
 <ID>6</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss5</Subject>
 <Grade>30</Grade>
@@ -53,7 +53,7 @@
 <StudentList>
 <ID>7</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss6</Subject>
 <Grade>30</Grade>
@@ -63,7 +63,7 @@
 <StudentList>
 <ID>8</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss7</Subject>
 <Grade>30</Grade>
@@ -73,7 +73,7 @@
 <StudentList>
 <ID>9</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss8</Subject>
 <Grade>30</Grade>
@@ -83,7 +83,7 @@
 <StudentList>
 <ID>10</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss9</Subject>
 <Grade>30</Grade>
@@ -93,7 +93,7 @@
 <StudentList>
 <ID>11</ID>
 <BarCode>123</BarCode>
-<Names>Antonino Apilyido</Names>
+<Names>Antonino Lastname</Names>
 <YearandCourse>BSIT - I</YearandCourse>
 <Subject>ss10</Subject>
 <Grade>30</Grade>
