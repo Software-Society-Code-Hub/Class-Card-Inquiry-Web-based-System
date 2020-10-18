@@ -75,7 +75,7 @@
                 </div>
                 <br><br>
                 <button class="button is-danger"><a href="scripts/php/logout.php">Logout</a></button><br><br>
-                <h1 class="subtitle has-text-centered">NOTE!: Changed records may not show when uploading a database or xml file when one or more records are changed, this is because MySQL doesn't detect changed rows in XML files. You may delete the database and reupload the updated XML file to insert the changed records.</h1>
+                <h1 class="subtitle has-text-centered">NOTE: To update the database, please delete the current database and upload the new one. This is to avoid conflicts within records.</h1>
             </div>
         </div>
     </div>
