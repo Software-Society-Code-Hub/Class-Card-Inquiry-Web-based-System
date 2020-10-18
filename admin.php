@@ -46,7 +46,7 @@
                     <label class="label">
                         <p class="subtitle">Search Bar Code:</p>
                     </label>
-                    <input type="input" class="input" v-model="BC" name="BC" placeholder="input Bar Code">
+                    <input type="input" class="input" v-model="barCode" name="barCode" placeholder="input Bar Code">
                     <button type="submit" class="button is-primary" @click='searchID()'>Submit</button>
                     <button type="submit" class="button is-primary" @click='viewAll()'>View all records</button>
                     <br><br>
@@ -85,14 +85,14 @@
             el: '#view',
             data: {
                 students: "",
-                BC: ""
+                barCode: ""
             },
             methods: {
                 searchID: function() {
-                    if (this.BC > 0) {
+                    if (this.barCode > 0) {
                         axios.get('scripts/php/admindb.php', {
                                 params: {
-                                    BC: this.BC
+                                    barCode: this.barCode
                                 }
                             })
                             .then(function(response) {
