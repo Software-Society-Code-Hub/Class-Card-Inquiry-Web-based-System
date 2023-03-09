@@ -8,7 +8,7 @@ user: lcc
 pass: lcc
 
 # Prerequisite
-* XAMPP with Apache and MySQL installed
+* XAMPP with Apache and MySQL installed, you can get it [here](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.12/xampp-windows-x64-8.1.12-0-VS16-installer.exe/download)
 * PHP 5.0 or greater
 
 # Get Started
